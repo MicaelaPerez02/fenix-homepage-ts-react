@@ -12,7 +12,7 @@ import Class from "./Class";
 const classes: Array<ClassType> = [
   {
     name: "Crossfit",
-    image: image1,
+    image: image1
   },
   {
     name: "Crossfit Kids",
