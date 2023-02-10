@@ -1,7 +1,7 @@
 import { SelectedPage } from "@/shared/types";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.jpg";
+import ContactUsPageGraphic from "@/assets/ContactUsPageGraphicc.jpg";
 import HText from "@/shared/HText";
 
 type Props = {
@@ -141,10 +141,11 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             }}
           >
             <div>
-                <img 
+              <img
                 className="w-full"
                 alt="contact us page graphic"
-                src={ContactUsPageGraphic}/>
+                src={ContactUsPageGraphic}
+              />
             </div>
           </motion.div>
         </div>
