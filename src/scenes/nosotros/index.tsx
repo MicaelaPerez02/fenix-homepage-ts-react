@@ -15,19 +15,19 @@ const nosotros: Array<NosotrosType> = [
     icon: <HomeModernIcon className="h-6 w-6" />,
     title: "Galletitas y Cupcakes",
     description:
-      "Entrenamiento basado en ejercicios con movimientos funcionales ejecutados a alta intensidad. Acompañamos adaptando los movimientos y cargas para que evoluciones sin prisa pero sin pausa más allá de tu edad y condición física.",
+      "En nuestra pastelería para mascotas, ofrecemos galletitas y cupcakes deliciosos y saludables para que tu mascota pueda disfrutar de un snack sin comprometer su salud. Elaborados con ingredientes naturales y frescos.",
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "Tortas de Cumpleaños",
     description:
-      "Deporte que consiste en el levantamiento del máximo peso posible en una barra. Te acompañamos enseñando la correcta técnica y ejecución de los movimientos para que puedas mejorar de forma segura.",
+      "Celebra el cumpleaños de tu mascota con una deliciosa torta hecha especialmente para él, del sabor que elijas. En nuestra pastelería para mascotas, ofrecemos tortas de cumpleaños hechas con ingredientes naturales y frescos.",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
     title: "Helados",
     description:
-      "El entrenamiento funcional es una clasificación de los ejercicios que implica entrenar el cuerpo para las actividades de la vida diaria. Acompañados de excelentes profesores que te guiarán en cada movimiento para que puedas mejorar y divertirte.",
+      "En nuestra pastelería para mascotas, también ofrecemos opciones de helados para que tu mascota pueda disfrutar de un dulce y refrescante postre. Todos nuestros helados son elaborados con ingredientes naturales y frescos.",
   },
 ];
 
@@ -59,20 +59,19 @@ const Nosotros = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText>MÁS QUE SOLO UN BOX</HText>
+          <HText>MÁS QUE SOLO UNA PASTELERÍA</HText>
           <p className="my-5 text-sm">
-            Practicar ejercicio y llevar un estilo de vida más activo requiere
-            esfuerzo y tiempo. Tenemos instalaciones con equipamientos modernos,
-            con un ambiente agradable e instructores cualificados y con
-            vocación, entregados para mejorar la vida de las personas a través
-            del fitness.
+            En nuestra pastelería para mascotas también nos preocupamos por su salud y bienestar.
+            Tenemos una gran variedad de opciones de snacks, galletitas, cupcakes y tortas de cumpleaños,
+            todo hecho con ingredientes naturales y frescos.
+            Además, ofrecemos opciones de helados para que tu mascota pueda disfrutar de un dulce refrescante.
           </p>
         </motion.div>
 
         {/* benefits */}
-        <div className="md: flex-wrap ">
+        <div className="md: flex-wrap md:flex-wrap md:flex justify-center">
           <motion.div
-            className="mt-5 justify-between gap-8 md:flex"
+            className=" mt-5 justify-between gap-8 md:flex w-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

@@ -18,7 +18,8 @@ const NosotrosPage = ({ icon, title, description, setSelectedPage }: Props) => {
   return (
     <motion.div
       variants={childVariant}
-    className="md:w-[350px] rounder-md mt-5 border-2 border-gray-100 px-5 py-16 text-center">
+      className="md:w-[350px] rounded-md mt-5 border-2 border-gray-100 px-5 py-16 flex flex-col justify-between items-center text-center"
+    >
       <div className="mb-4 flex justify-center">
         <div className="rounded-full border-2 border-gray-100 bg-primary-100">
           {icon}
@@ -32,7 +33,7 @@ const NosotrosPage = ({ icon, title, description, setSelectedPage }: Props) => {
         onClick={() => setSelectedPage(SelectedPage.Contactanos)}
         href={`#${SelectedPage.Contactanos}`}
       >
-        <p>Learn more</p>
+        <p>Descubrí más</p>
       </AnchorLink>
     </motion.div>
   );

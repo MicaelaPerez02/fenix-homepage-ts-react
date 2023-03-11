@@ -3,37 +3,27 @@ import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
 import image4 from "../../assets/image4.png";
-import image5 from "../../assets/image5.jpg";
-import image6 from "../../assets/image6.png";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
 import NuestrosProductosPage from "./NuestrosProductosPage";
 
 const productos: Array<NuestrosProductosType> = [
   {
-    name: "Crossfit",
+    name: "Cupcakes",
     image: image1,
   },
   {
-    name: "Crossfit Kids",
+    name: "Galletas",
     image: image2,
   },
   {
-    name: "Levantamiento de Pesas",
+    name: "Tortas",
     image: image3,
   },
   {
-    name: "Funcional",
+    name: "Helados",
     image: image4,
-  },
-  {
-    name: "GAP",
-    image: image5,
-  },
-  {
-    name: "Karate",
-    image: image6,
-  },
+  }
 ];
 
 type Props = {
@@ -67,7 +57,7 @@ const NuestrosProductos = ({ setSelectedPage }: Props) => {
           </div>
         </motion.div>
         <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-          <ul className="w-[2800px] whitespace-nowrap">
+          <ul className="whitespace-nowrap" >
             {productos.map((item: NuestrosProductosType, index) => (
               <NuestrosProductosPage
                 key={`${item.name}-${index}`}
