@@ -12,6 +12,12 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
+function openWhatsApp() {
+  const phoneNumber = "1164185598"; // Reemplaza con el número de teléfono del usuario
+  const url = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+  window.open(url, "_blank");
+}
+
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
@@ -63,9 +69,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     Contactanos
                   </Link>
                 </div>
-                <div className={`${flexBetween} gap-8`}>
+                <div className={`${flexBetween} gap-8 cursor-pointer`} onClick={openWhatsApp}>
                   <ActionButton setSelectedPage={setSelectedPage}>
-                    Sumate a la comunidad
+                    Mandanos un WhatsApp
                   </ActionButton>
                 </div>
               </div>
