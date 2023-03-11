@@ -32,7 +32,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   };
 
   return (
-    <section id="contactanos" className="mx-auto w-5/6 pt-12">
+    <section id="contactanos" className="mx-auto w-5/6 pt-12 pb-16">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Contactanos)}
       >
