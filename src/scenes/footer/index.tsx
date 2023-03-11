@@ -18,22 +18,14 @@ const Footer = (props: Props) => {
           <a
             target="_blank"
             className="text-decoration-none my-5"
-            href="https://www.instagram.com/fenix_entrenamiento_/"
+            href="https://www.instagram.com/pasteleriademascotas/"
           >
             Instagram
-          </a>
-          <p className="py-2"></p>
-          <a
-            target="_blank"
-            className="text-decoration-none my-5"
-            href="https://goo.gl/maps/hzxKGd6ZKAdbqRDy8"
-          >
-            Mapa
           </a>
         </div>
         <div className="mt-10 basis-1/4 md:mt-0">
           <h4 className="pt-2 font-bold">Contactanos</h4>
-          <p className="my-5">+54 11 2184-6416</p>
+          <p className="my-5">+54 11 6418-5598</p>
           <p className="my-5">
             Lomas del Mirador, La Matanza - Buenos Aires.
           </p>

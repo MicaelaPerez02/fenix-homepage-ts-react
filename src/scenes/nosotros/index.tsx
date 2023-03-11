@@ -37,9 +37,17 @@ const container = {
     transition: { staggerChildren: 0.2 },
   },
 };
+
+
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
+
+function openWhatsApp() {
+  const phoneNumber = "1164185598"; // Reemplaza con el número de teléfono del usuario
+  const url = `https://api.whatsapp.com/send?phone=${phoneNumber}`;
+  window.open(url, "_blank");
+}
 
 const Nosotros = ({ setSelectedPage }: Props) => {
   return (
@@ -138,20 +146,23 @@ const Nosotros = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="mt-5">
-                Todos podemos hacer Crossfit siempre y cuando los coaches te
-                cuiden y nuestro principal objetivo es cuidar tu salud.
+              Nuestro objetivo principal es asegurarnos de que tus mascotas 
+              reciban la mejor calidad de ingredientes naturales para mantenerlos saludables y felices.
               </p>
               <p className="mb-5">
-                Somos un grupo de personas que hacemos los que nos gusta y
-                estamos rodeados de otras que sólo quieren entrenar
-                divirtiéndose.
+              Somos una familia de amantes de las mascotas que disfrutamos lo que hacemos y estamos rodeados de otros 
+              que comparten nuestra pasión por el cuidado de los amigos peludos. 
+              Nos esforzamos por ofrecer productos que no solo sean deliciosos sino también seguros y saludables 
+              para tu mascota, porque para nosotros, su bienestar es nuestra prioridad. 
+
+              ¡Contactanos y descubrí todo lo que tenemos para ofrecer!
               </p>
             </motion.div>
             {/*button */}
             <div className="relative mt-16">
-              <div className="">
+              <div className="cursor-pointer"  onClick={openWhatsApp}>
                 <ActionButton setSelectedPage={setSelectedPage}>
-                  Unite ahora
+                  ¡Contactanos!
                 </ActionButton>
               </div>
             </div>

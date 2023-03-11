@@ -32,7 +32,7 @@ type Props = {
 
 const NuestrosProductos = ({ setSelectedPage }: Props) => {
   return (
-    <section id="nuestrosproductos" className="w-full bg-primary-100 py-40">
+    <section id="nuestrosproductos" className="w-full bg-primary-100 py-12">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.NuestrosProductos)}
       >
@@ -51,8 +51,9 @@ const NuestrosProductos = ({ setSelectedPage }: Props) => {
             <HText>NUESTROS PRODUCTOS</HText>
             <p className="py-5">
               {" "}
-              Tenemos clases de Crossfit, Crossfit Kids, Funcional,
-              Levantamiento de Pesas, GAP, Karate y más.
+              Ofrecemos una variedad de deliciosas opciones de repostería para satisfacer los gustos de tu amigo peludo. 
+              Desde galletitas y cupcakes hasta tortas y helados. 
+              ¡Mira!
             </p>
           </div>
         </motion.div>

@@ -3,14 +3,16 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import ContactUsPageGraphic from "../../assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
+import { useState } from "react";
+import Modal from "react-modal";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white`;
-
+  const inputStyles = `mb-5 w-full rounded-lg px-5 py-3 placeholder-white bg-primary-500 text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50`;
+  const [showModal, setShowModal] = useState(false);
   const {
     register,
     trigger,
@@ -21,11 +23,16 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();
+
+    } else {
+      setShowModal(true);
+
+      console.log("Form submitted", showModal);
     }
   };
 
   return (
-    <section id="contactanos" className="mx-auto w-5/6 pt-24 pb-32">
+    <section id="contactanos" className="mx-auto w-5/6 pt-12 pb-32">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Contactanos)}
       >
@@ -42,7 +49,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           }}
         >
           <HText>
-            <span className="text-primary-500">Contactanoos ahora</span>
+            <span className="text-primary-500">Contactanos ahora</span>
             {""} y comenza a disfrutar con tu mascota
           </HText>
           <p className="my-5">
@@ -51,6 +58,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
         </motion.div>
         {/*form and image */}
         <div className="mt-10 justify-between gap-8 md:flex">
+
           <motion.div
             className="mt-10 basis-3/5 md:mt-0"
             initial="hidden"
@@ -67,6 +75,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               onSubmit={onSubmit}
               action="https://formsubmit.co/b974249af20be81bee72fa8ccb4dde46"
               method="POST"
+
             >
               <input
                 className={inputStyles}
@@ -122,10 +131,44 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
               <button
                 type="submit"
+                name="_captcha"
+                value="false"
                 className="mt-5 rounded-lg bg-secondary-500 px-20 py-3 transition duration-500 hover:text-white"
               >
                 ENVIAR
               </button>
+              {showModal ? (
+                // muestra el modal si showModal es true
+                <Modal
+                  isOpen={showModal}
+                  onRequestClose={() => setShowModal(false)}
+                  closeTimeoutMS={500}
+                  ariaHideApp={false}
+                  style={{
+                    overlay: {
+                      backgroundColor: "rgba(0,0,0,0.5)",
+                      zIndex: 999,
+                    },
+                    content: {
+                      top: "50%",
+                      left: "50%",
+                      right: "auto",
+                      bottom: "auto",
+                      marginRight: "-50%",
+                      transform: "translate(-50%, -50%)",
+                      backgroundColor: "#F3F4F6",
+                      boxShadow:
+                        "0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 30px -10px rgba(0, 0, 0, 0.15)",
+                      borderRadius: "0.75rem",
+                      padding: "3rem",
+                      textAlign: "center",
+                    },
+                  }}
+                >
+                  <h2 className="mb-6">Mensaje enviado correctamente</h2>
+                  <button type="button" onClick={() => setShowModal(false)} className="bg-primary-100 rounded-md p-2 cursor-pointer">Cerrar</button>
+                </Modal>
+              ) : null}
             </form>
           </motion.div>
 
