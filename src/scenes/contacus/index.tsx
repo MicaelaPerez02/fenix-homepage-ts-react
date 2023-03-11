@@ -1,7 +1,7 @@
 import { SelectedPage } from "@/shared/types";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "../../../public/assets/ContactUsPageGraphic.jpg";
+import ContactUsPageGraphic from "../../assets/ContactUsPageGraphic.png";
 import HText from "@/shared/HText";
 
 type Props = {
@@ -42,8 +42,8 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           }}
         >
           <HText>
-            <span className="text-primary-500">Unite ahora</span>
-            {""} y comenza a entrenar con nosotros
+            <span className="text-primary-500">Contactanoos ahora</span>
+            {""} y comenza a disfrutar con tu mascota
           </HText>
           <p className="my-5">
             Consultanos todo lo que necesites saber, estamos para ayudarte.
@@ -130,7 +130,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           </motion.div>
 
           <motion.div
-            className="relative mt-16 basis-2/5 md:mt-0"
+            className="relative mt-16 basis-2/5 w-4 md:mt-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -142,7 +142,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           >
             <div>
               <img
-                className="w-full"
+                className="w-full h-full object-cover"
                 alt="contact us page graphic"
                 src={ContactUsPageGraphic}
               />

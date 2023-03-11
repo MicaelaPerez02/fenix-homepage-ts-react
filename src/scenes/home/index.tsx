@@ -1,11 +1,12 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
-import HomePageText from "../../../public/assets/HomePageText.png";
-import HomePageGraphic from "../../../public/assets/HomePageGraphic.png";
-import SponsorFenix from "../../../public/assets/SponsorFenix.png";
-import SponsorCrossfit from "../../../public/assets/SponsorCrossfit.png";
-import SponsorFortune from "../../../public/assets/SponsorFortune.png";
+import HomePageText from "../../assets/HomePageText.png";
+import HomePageGraphic from "../../assets/HomePageGraphic.png";
+import SponsorAmorAnimales from "../../assets/SponsorAmorAnimales.png";
+import SponsorEnvios from "../../assets/SponsorEnvios.png";
+import SponsorFreshFood from "../../assets/SponsorFreshFood.png";
+import SponsorNat from "../../assets/SponsorNat.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
 
@@ -38,21 +39,22 @@ const Home = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
+              <div className="before:absolute before:top-15 before:left-20 before:z-[-1] md:before:content-evolvetext">
                 <img alt="home-page-text" src={HomePageText} />
               </div>
             </div>
 
             <p className="mt-8 text-sm">
-              Queremos que seas feliz entrenando con nosotros. Entrenar es salud
-              y tu salud nos importa. Te esperamos siempre. 
-              Emilio Mitre 836 - Ramos Mejía.
+              Queremos que darle lo mejor a tu mascota. Nuestros snacks son 100% naturales,
+              sin conservantes y frescos, sin dejar de ser deliciosos.
+              Nos preocupamos por la felicidad y salud de tu mascota. No dudes en probarlos.
+              Lomas del Mirador - La Matanza - Buenos Aires
             </p>
           </motion.div>
 
           {/* ACTIONS */}
           <motion.div
-            className="mt-8 flex items-center gap-8 mb-10"
+            className="mt-8 mb-10 flex items-center gap-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -62,9 +64,13 @@ const Home = ({ setSelectedPage }: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <ActionButton setSelectedPage={setSelectedPage}>
-              Hacete Miembro
-            </ActionButton>
+            <p onClick={() => window.open("https://www.instagram.com/pasteleriademascotas/")} className="cursor-pointer">
+              <ActionButton setSelectedPage={setSelectedPage}>
+
+                Unite a la comunidad
+
+              </ActionButton>
+            </p>
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => setSelectedPage(SelectedPage.Contactanos)}
@@ -80,18 +86,23 @@ const Home = ({ setSelectedPage }: Props) => {
           className="flex basis-3/6 justify-center md:z-10
               md:ml-40 md:mt-16 md:justify-items-end"
         >
-          <img alt="home-pageGraphic" src={HomePageGraphic} className={`h-21`}/>
+          <img
+            alt="home-pageGraphic"
+            src={HomePageGraphic}
+            className={`h-21`}
+          />
         </div>
       </motion.div>
 
       {/* SPONSORS */}
       {isAboveMediumScreens && (
-        <div className="h-[135px] w-full bg-primary-100 py-10 mt-12">
+        <div className="mt-10 h-[135px] w-full bg-primary-100 pb-10 pt-8">
           <div className="mx-auto w-5/6">
-            <div className="flex w-3/5 items-center justify-between gap-8">
-              <img alt="fenix-games-sponsor" src={SponsorFenix} />
-              <img alt="crossfit-sponsor" src={SponsorCrossfit} />
-              <img alt="fortune-sponsor" src={SponsorFortune} />
+            <div className="flex items-center justify-between gap-6">
+              <img alt="sponsor-amor-animales" src={SponsorAmorAnimales} className="w-20 h-15" />
+              <img alt="sponsor-envios" src={SponsorEnvios} className="w-20 h-15" />
+              <img alt="sponsor-fresh-food" src={SponsorFreshFood} className="w-20 h-15" />
+              <img alt="sponsor-100%-naturales" src={SponsorNat} className="w-20 h-15" />
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import Logo from "../../../public/assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 
 type Props = {};
 
@@ -7,11 +7,11 @@ const Footer = (props: Props) => {
     <footer className="bg-primary-100 py-16">
       <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
         <div className="basis-1/2 md:mt-0">
-          <img src={Logo} alt="Logo" className={`h-6 w-28`} />
+          <img src={Logo} alt="Logo" className={`h-6 w-40`} />
           <p className="my-5">
             Gracias por visitarnos, esperamos verte pronto!
           </p>
-          <p>© Fenix Centro de Entrenamiento. All rights reserved </p>
+          <p>© Pasteleria de Mascotas. All rights reserved </p>
         </div>
         <div className="mt-10 basis-1/4 md:mt-0">
           <h4 className="py-2 font-bold">Links</h4>
@@ -35,7 +35,7 @@ const Footer = (props: Props) => {
           <h4 className="pt-2 font-bold">Contactanos</h4>
           <p className="my-5">+54 11 2184-6416</p>
           <p className="my-5">
-            Emilio Mitre 836, Ramos Mejia, Provincia de Buenos Aires
+            Lomas del Mirador, La Matanza - Buenos Aires.
           </p>
         </div>
       </div>
