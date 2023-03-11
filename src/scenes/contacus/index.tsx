@@ -75,7 +75,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               onSubmit={onSubmit}
               action="https://formsubmit.co/b974249af20be81bee72fa8ccb4dde46"
               method="POST"
-
+              data-netlify="true"
             >
               <input
                 className={inputStyles}
