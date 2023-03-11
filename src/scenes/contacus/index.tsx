@@ -185,7 +185,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           >
             <div>
               <img
-                className="md:w-full md:h-full md:object-cover hidden"
+                className="hidden md:block md:w-full md:h-full md:object-cover "
                 alt="contact us page graphic"
                 src={ContactUsPageGraphic}
               />
