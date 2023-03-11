@@ -7,7 +7,7 @@ const Footer = (props: Props) => {
     <footer className="bg-primary-100 py-16">
       <div className="justify-content mx-auto w-5/6 gap-16 md:flex">
         <div className="basis-1/2 md:mt-0">
-          <img src={Logo} alt="Logo" className={`h-6 w-40`} />
+          <img src={Logo} alt="Logo" className={`w-12 h-12`} />
           <p className="my-5">
             Gracias por visitarnos, esperamos verte pronto!
           </p>
