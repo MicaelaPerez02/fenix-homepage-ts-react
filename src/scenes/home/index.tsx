@@ -67,7 +67,7 @@ const Home = ({ setSelectedPage }: Props) => {
             <p onClick={() => window.open("https://www.instagram.com/pasteleriademascotas/")} className="cursor-pointer">
               <ActionButton setSelectedPage={setSelectedPage}>
 
-                Unite a la comunidad
+              Sumate a la comunidad
 
               </ActionButton>
             </p>
