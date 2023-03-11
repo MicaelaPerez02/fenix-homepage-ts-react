@@ -128,7 +128,7 @@ const Nosotros = ({ setSelectedPage }: Props) => {
                   }}
                 >
                   <HText>
-                    CIENTOS DE PERSONAS ENTRENANDO{" "}
+                    CIENTOS DE MASCOTAS{" "}
                     <span className="text-primary-500">FELICES</span>
                   </HText>
                 </motion.div>
